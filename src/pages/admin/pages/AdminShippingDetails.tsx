@@ -9,7 +9,7 @@ import AdminNavbar from "../components/navbar/AdminNavbar";
 function AdminShippingDetails() {
   const { id } = useParams();
   const { data, loading, error } = useFetch<IShippingResponse>(
-    `http://localhost:8080/api/user/shipping/${id}`
+    `https://courier-app-backend-production.up.railway.app/api/user/shipping/${id}`
   );
   const [pages, setPage] = useState(1);
 

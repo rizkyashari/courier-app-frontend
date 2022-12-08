@@ -34,7 +34,7 @@ function Register() {
     try {
       // console.log(input);
       let response = await axios.post(
-        "http://localhost:8080/api/auth/register",
+        "https://courier-app-backend-production.up.railway.app/api/auth/register",
         {
           name: input.name,
           email: input.email,

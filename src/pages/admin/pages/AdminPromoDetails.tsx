@@ -9,7 +9,7 @@ import AdminNavbar from "../components/navbar/AdminNavbar";
 function AdminPromoDetails() {
   const { id } = useParams();
   const { data, loading, error } = useFetch<IPromoResponse>(
-    `http://localhost:8080/api/admin/promo/${id}`
+    `https://courier-app-backend-production.up.railway.app/api/admin/promo/${id}`
   );
   const navigate = useNavigate();
 

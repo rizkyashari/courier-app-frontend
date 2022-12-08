@@ -17,10 +17,13 @@ function Login() {
     event.preventDefault();
 
     try {
-      let user = await axios.post("http://localhost:8080/api/auth/login", {
-        email: input.email,
-        password: input.password,
-      });
+      let user = await axios.post(
+        "https://courier-app-backend-production.up.railway.app/api/auth/login",
+        {
+          email: input.email,
+          password: input.password,
+        }
+      );
 
       if (user.data.data.role == "Admin") {
         navigate("/admin");
