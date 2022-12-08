@@ -20,11 +20,14 @@ export const useStoreUserPromo = create<PromoState>()((set) => ({
     let token = localStorage.getItem("id_token");
     set(() => ({ loading: true }));
     axios
-      .get("http://localhost:8080/api/user/user-promo", {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        "https://courier-app-backend-production.up.railway.app/api/user/user-promo",
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         set(() => ({
           userPromoDatas: response.data.data,

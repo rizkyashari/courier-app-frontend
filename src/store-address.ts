@@ -197,11 +197,14 @@ export const useStoreAddress = create<AddressState>()((set) => ({
     let token = localStorage.getItem("id_token");
     set(() => ({ loading: true }));
     axios
-      .get("http://localhost:8080/api/user/address", {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        "https://courier-app-backend-production.up.railway.app/api/user/address",
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         set(() => ({
           addressDatas: response.data.data,
@@ -239,11 +242,14 @@ export const useStoreAddress = create<AddressState>()((set) => ({
     let token = localStorage.getItem("id_token");
     set(() => ({ loading: true }));
     axios
-      .get("http://localhost:8080/api/admin/address", {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        "https://courier-app-backend-production.up.railway.app/admin/address",
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         set(() => ({
           addressDatas: response.data.data,

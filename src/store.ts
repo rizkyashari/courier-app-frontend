@@ -73,7 +73,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.get(
-        "http://localhost:8080/api/user/shipping"
+        "https://courier-app-backend-production.up.railway.app/api/user/shipping"
       );
       console.log(response);
       set((state) => ({
@@ -91,7 +91,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.get(
-        "http://localhost:8080/api/user/shipping"
+        "https://courier-app-backend-production.up.railway.app/api/user/shipping"
       );
 
       set((state) => ({
@@ -109,7 +109,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/transactions/transfer",
+        "https://courier-app-backend-production.up.railway.app/transactions/transfer",
         {
           to: payload.to,
           amount: parseInt(payload.amount.toString()),
@@ -131,7 +131,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/api/user/top-up",
+        "https://courier-app-backend-production.up.railway.app/api/user/top-up",
         {
           amount: payload.amount,
           source_of_fund_id: payload.source_of_fund_id,
@@ -156,7 +156,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/api/user/shipping",
+        "https://courier-app-backend-production.up.railway.app/api/user/shipping",
         {
           size_id: payload.size_id,
           category_id: payload.category_id,
@@ -183,7 +183,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/api/user/address",
+        "https://courier-app-backend-production.up.railway.app/api/user/address",
         {
           full_address: payload.full_address,
           recipient_name: payload.recipient_name,
@@ -209,7 +209,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/api/user/user-promo",
+        "https://courier-app-backend-production.up.railway.app/api/user/user-promo",
         {
           user_id: payload.user_id,
           promo_id: payload.promo_id,
@@ -234,7 +234,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.put(
-        `http://localhost:8080/api/user/address/${payload.id}`,
+        `https://courier-app-backend-production.up.railway.app/user/address/${payload.id}`,
         {
           id: payload.id,
           full_address: payload.full_address,
@@ -261,7 +261,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.put(
-        `http://localhost:8080/api/admin/promo/${payload.id}`,
+        `https://courier-app-backend-production.up.railway.app/api/admin/promo/${payload.id}`,
         {
           id: payload.id,
           name: payload.name,
@@ -291,7 +291,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.put(
-        `http://localhost:8080/api/admin/shipping/${payload.id}`,
+        `https://courier-app-backend-production.up.railway.app/api/admin/shipping/${payload.id}`,
         {
           id: payload.id,
           user_id: payload.user_id,
@@ -322,7 +322,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.put(
-        `http://localhost:8080/api/admin/shipping/${payload.id}`,
+        `https://courier-app-backend-production.up.railway.app/api/admin/shipping/${payload.id}`,
         {
           id: payload.id,
           user_id: payload.user_id,
@@ -354,7 +354,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.put(
-        `http://localhost:8080/api/user/profile/${payload.id}`,
+        `https://courier-app-backend-production.up.railway.app/api/user/profile/${payload.id}`,
         {
           id: payload.id,
           name: payload.name,
@@ -390,7 +390,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
       alert("Address successfully deleted");
       try {
         const response = await requestInstance.delete(
-          `http://localhost:8080/api/user/address/${payload}`,
+          `https://courier-app-backend-production.up.railway.app/api/user/address/${payload}`,
           {}
         );
 
@@ -423,7 +423,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
       alert("Address successfully deleted");
       try {
         const response = await requestInstance.delete(
-          `http://localhost:8080/api/user/shipping/${payload}`,
+          `https://courier-app-backend-production.up.railway.app/api/user/shipping/${payload}`,
           {}
         );
 
@@ -448,7 +448,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.get(
-        `http://localhost:8080/api/user/address/${payload}`,
+        `https://courier-app-backend-production.up.railway.app/api/user/address/${payload}`,
         {}
       );
       console.log(response.data);
@@ -470,7 +470,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.post(
-        "http://localhost:8080/api/user/payment",
+        "https://courier-app-backend-production.up.railway.app/api/user/payment",
         {
           shipping_id: payload.shipping_id,
           user_promo_id: payload.user_promo_id,
@@ -496,7 +496,7 @@ export const useTransactionStore = create<TransactionState>((set) => ({
 
     try {
       const response = await requestInstance.get(
-        "http://localhost:8080/api/user/profile"
+        "https://courier-app-backend-production.up.railway.app/api/user/profile"
       );
       console.log(response);
       set((state) => ({

@@ -336,11 +336,14 @@ export const useStoreProfile = create<ShippingState>()((set) => ({
     let token = localStorage.getItem("id_token");
     set(() => ({ loading: true }));
     axios
-      .get("http://localhost:8080/api/user/payment", {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        "https://courier-app-backend-production.up.railway.app/api/user/payment",
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         set(() => ({
           paymentDatas: response.data.data,
@@ -363,11 +366,14 @@ export const useStoreProfile = create<ShippingState>()((set) => ({
     console.log(token, "=======================================");
     set(() => ({ loading: true, dataFilter: [] }));
     axios
-      .get(`http://localhost:8080/api/user/shipping?page=${payload}`, {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        `https://courier-app-backend-production.up.railway.app/api/user/shipping?page=${payload}`,
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         console.log(response, "WGDWQYUDGQFDWFQFDUQFQWYDF");
         set(() => ({
@@ -407,11 +413,14 @@ export const useStoreProfile = create<ShippingState>()((set) => ({
     console.log(token, "=======================================");
     set(() => ({ loading: true, dataFilter: [] }));
     axios
-      .get(`http://localhost:8080/api/admin/shipping?page=${payload}`, {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
+      .get(
+        `https://courier-app-backend-production.up.railway.app/api/admin/shipping?page=${payload}`,
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      )
       .then((response) => {
         console.log(response.data.data, "WGDWQYUDGQFDWFQFDUQFQWYDF");
         set(() => ({
