@@ -9,7 +9,7 @@ import { useStoreAddress } from "../../store-address";
 function AddressDetails() {
   const { id } = useParams();
   const { data, loading, error } = useFetch<IAddressResponse>(
-    `http://localhost:8080/api/user/address/${id}`
+    `https://courier-app-backend-production.up.railway.app/api/user/address/${id}`
   );
   const navigate = useNavigate();
   console.log("data listCustom", data);
