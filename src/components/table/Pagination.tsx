@@ -24,9 +24,7 @@ const Pagination: React.FC<Props> = ({
       </button>
 
       <span className="page-item">
-        <button className="btn">
-          Page {currentPage} of {totalPages}
-        </button>
+        <button className="btn">Page {currentPage}</button>
       </span>
 
       <button

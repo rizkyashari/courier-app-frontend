@@ -10,7 +10,7 @@ function HomePage() {
         <AdminNavbar />
         <div className="container col d-flex flex-column h-sm-100">
           <Greetings />
-          <img src={WelcomeAdmin} width="1200px" alt="Welcome Admin" />
+          <img src={WelcomeAdmin} className="img-fluid" alt="Welcome Admin" />
         </div>
       </div>
     </div>

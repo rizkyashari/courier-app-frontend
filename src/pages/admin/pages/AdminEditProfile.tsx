@@ -95,13 +95,13 @@ function AdminEditProfile() {
     <div className="container-fluid overflow-hidden">
       <div className="row vh-100 flex-nowrap overflow-auto">
         <AdminNavbar />
-        <div className="container col d-flex flex-column h-sm-100">
+        <div className="mt-3 container col d-flex flex-column h-sm-100">
           <Link to="/admin/profile">
             <button className="btn btn-success">Back</button>
           </Link>
           <div className="container" style={{ marginTop: "5rem" }}>
             <div className="row justify-content-md-center">
-              <div className="col xs lg-2">
+              <div className="col-lg-6 col-xs-12">
                 <div className="md-auto">
                   <h2 className="d-flex justify-content-center fw-bold">
                     Edit Profile
@@ -154,7 +154,7 @@ function AdminEditProfile() {
                         onChange={(e) => handleChangeImage(e)}
                       />
                     </div>
-                    <div className="p-2 d-grid gap-3">
+                    <div className="d-grid gap-2">
                       <button
                         className="btn btn-success"
                         type="submit"
@@ -168,8 +168,12 @@ function AdminEditProfile() {
                   </form>
                 </div>
               </div>
-              <div className="col xs lg-2 d-flex justify-content-end">
-                <img src={ProfileImage} height="400px" alt="Profile Image" />
+              <div className="col-lg-6 col-xs-12">
+                <img
+                  src={ProfileImage}
+                  className="img-fluid"
+                  alt="Profile Image"
+                />
               </div>
             </div>
           </div>

@@ -12,6 +12,13 @@ function AdminShippingDetails() {
     `https://courier-app-backend-production.up.railway.app/api/user/shipping/${id}`
   );
   const [pages, setPage] = useState(1);
+  let total = 0;
+  if (data?.data.add_on.price) {
+    total =
+      data?.data.add_on.price +
+      data?.data.size.price +
+      data.data.category.price;
+  }
 
   const handlePrevPage = (prevPage: number) => {
     // console.log(prevPage);
@@ -240,7 +247,7 @@ function AdminShippingDetails() {
                     <h5 className="card-title">Price</h5>
                     <p>IDR {data?.data.add_on.price}</p>
                     <h5 className="card-title">Total Cost</h5>
-                    <p>IDR {data?.data.add_on.price}</p>
+                    <p>IDR {total}</p>
                   </div>
                 </div>
                 <div className="d-grid gap-2">

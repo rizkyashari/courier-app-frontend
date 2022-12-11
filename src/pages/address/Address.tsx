@@ -55,7 +55,10 @@ function Address() {
       <Header />
       <CarouselSection />
       <div className="container mt-2 p-5">
-        <Link to="/create-address">
+        <Link
+          to="/create-address"
+          className="d-flex justify-content-center justify-content-xl-end p-2"
+        >
           <button className="btn btn-success">Create New Address</button>
         </Link>
         <TableAddress />

@@ -78,7 +78,10 @@ function Shipping() {
         <></>
       )}
       <div className="container mt-2 p-5">
-        <Link to="/create-shipping">
+        <Link
+          className="d-flex justify-content-center justify-content-xl-end p-2"
+          to="/create-shipping"
+        >
           <button className="btn btn-success">Create New Shipping</button>
         </Link>
         <TableShipping />

@@ -93,7 +93,10 @@ function AddressDetails() {
   return (
     <div className="container mt-5 p-5">
       <Header />
-      <Link to="/address">
+      <Link
+        to="/address"
+        className="mt-4 d-flex justify-content-center justify-content-lg-start"
+      >
         <button className="btn btn-success">Back</button>
       </Link>
       {error ? <p>Error</p> : null}
@@ -116,13 +119,15 @@ function AddressDetails() {
                   <p>{data?.data.full_address}</p>
                   <h5 className="card-title">Recipient Phone Number</h5>
                   <p>{String(data?.data.recipient_phone_number)}</p>
-                  <button
-                    className="btn btn-success"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Edit Address
-                  </button>
+                  <div className="d-grid gap-2">
+                    <button
+                      className="btn btn-success"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Edit Address
+                    </button>
+                  </div>
                   <div
                     className="modal fade"
                     id="exampleModal"

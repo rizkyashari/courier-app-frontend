@@ -10,7 +10,7 @@ function Greetings() {
   console.log(userProfileState.userProfiles.name);
   return (
     <div className="container my-3 p-5">
-      <h2 className="fw-bold mt-5 d-flex justify-content-center">
+      <h2 className="fw-bold d-flex justify-content-center text-center">
         Welcome, {userProfileState.userProfiles.name}
       </h2>
       {/* <p>Account: {userProfileState.userProfiles.wallet_number}</p> */}

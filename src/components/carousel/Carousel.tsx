@@ -5,13 +5,13 @@ import carousel3 from "../../assets/carousel-design3.png";
 
 function CarouselSection() {
   return (
-    <div>
+    <div className="pt-3 mt-5">
       <div
         id="carouselExampleDark"
-        className="carousel carousel-dark slide"
+        className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div className="carousel-indicators">
+        <div className="carousel-inner">
           <button
             type="button"
             data-bs-target="#carouselExampleDark"

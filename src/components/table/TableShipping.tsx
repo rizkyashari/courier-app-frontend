@@ -99,7 +99,7 @@ const TableShipping = () => {
   const renderTable = () => {
     return (
       <>
-        <div className="d-flex flex-warp my-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <div className="d-flex flex-column flex-lg-row my-4 shadow-lg p-3 mb-5 bg-body rounded">
           <div className="mx-1 my-2 flex-fill align-items-center">
             <label className="m-0 me-2">Show</label>
 
@@ -161,12 +161,14 @@ const TableShipping = () => {
             />
           </div>
         </div>
-        <Pagination
-          totalPages={totalPages}
-          currentPage={pages}
-          handlePrevPage={handlePrevPage}
-          handleNextPage={handleNextPage}
-        />
+        <div className="d-flex p-3 justify-content-center">
+          <Pagination
+            totalPages={totalPages}
+            currentPage={pages}
+            handlePrevPage={handlePrevPage}
+            handleNextPage={handleNextPage}
+          />
+        </div>
         <div className="table-responsive shadow-lg p-3 mb-5 bg-body rounded">
           <table className="table table-striped table-bordered tabel-hover">
             <thead className="table-head">
@@ -185,8 +187,8 @@ const TableShipping = () => {
               </tr>
             </thead>
             <tbody className="table-body">
-              {dataFilter.map((shippingState) => (
-                <tr key={shippingState.id}>
+              {dataFilter.map((shippingState, index) => (
+                <tr key={index}>
                   <td>{dateFormat(shippingState.UpdatedAt)}</td>
                   <td>{shippingState.size.name}</td>
                   <td>{shippingState.address.full_address}</td>

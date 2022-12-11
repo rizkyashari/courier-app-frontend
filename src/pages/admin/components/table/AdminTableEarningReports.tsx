@@ -82,7 +82,7 @@ const AdminTableEarningReports = () => {
   const renderTable = () => {
     return (
       <>
-        <div className="mx-5 my-5 col h-sm-100 d-flex flex-warp my-4 sticky-top bg-white">
+        <div className="mx-5 my-5 col h-sm-100 d-flex flex-column flex-lg-row flex-wrap my-4 sticky-top bg-white">
           <div className="mx-1 my-2 flex-fill align-items-center">
             <label className="m-0 me-2">Label</label>
             <select

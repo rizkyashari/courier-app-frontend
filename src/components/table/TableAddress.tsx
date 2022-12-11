@@ -80,7 +80,7 @@ const TableAddress = () => {
   const renderTable = () => {
     return (
       <>
-        <div className="d-flex flex-warp my-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <div className="d-flex flex-column flex-lg-row my-4 shadow-lg p-3 mb-5 bg-body rounded">
           <div className="mx-1 my-2  flex-fill align-items-center">
             <label className="m-0 me-2">Show</label>
             <select
@@ -97,7 +97,7 @@ const TableAddress = () => {
               <option value="LAST_YEAR">Last year</option>
             </select>
           </div>
-          <div className="mx-1 my-2">
+          <div className="mx-1 my-2  ">
             <label htmlFor="sortBy" className="m-0 me-2">
               Sort By
             </label>

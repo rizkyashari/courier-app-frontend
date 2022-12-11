@@ -9,11 +9,13 @@ function Balance() {
     userProfileState.fetchUserProfiles();
   }, []);
   return (
-    <JustifyContentEnd>
+    <div className="container mt-4 mb-4">
       <div className="row">
-        <h2 className="d-flex justify-content-end">Balance:</h2>
+        <h2 className="d-flex justify-content-center justify-content-lg-end">
+          Balance:
+        </h2>
         <br></br>
-        <h1 className="d-flex justify-content-end fw-bold">
+        <h1 className="d-flex justify-content-center justify-content-lg-end fw-bold">
           IDR{" "}
           {Intl.NumberFormat("id-ID").format(
             userProfileState.userProfiles.balance
@@ -21,7 +23,7 @@ function Balance() {
         </h1>
       </div>
       <div className="row"></div>
-    </JustifyContentEnd>
+    </div>
   );
 }
 

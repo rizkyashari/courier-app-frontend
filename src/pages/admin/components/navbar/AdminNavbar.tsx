@@ -25,11 +25,11 @@ function AdminNavbar() {
           <span className="fs-5 d-none d-sm-inline">Menu</span>
         </a>
         <ul
-          className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+          className="nav nav-pills flex-column mb-sm-auto mb-0  align-items-center align-items-sm-start"
           id="menu"
         >
           <li className="nav-item">
-            <a href="/admin" className="nav-link align-middle px-0">
+            <a href="/admin" className="nav-link text-white align-middle px-0">
               <i className="fs-4 bi-house"></i>{" "}
               <span className="ms-1 d-none d-sm-inline">Home</span>
             </a>
@@ -38,7 +38,7 @@ function AdminNavbar() {
             <a
               href="#submenu1"
               data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle"
+              className="nav-link px-0 align-middle text-white"
             >
               <i className="fs-4 bi-geo-alt"></i>{" "}
               <span className="ms-1 d-none d-sm-inline">Address</span>{" "}
@@ -49,8 +49,8 @@ function AdminNavbar() {
               data-bs-parent="#menu"
             >
               <li className="w-100">
-                <a href="/admin/address" className="nav-link px-0">
-                  {" "}
+                <a href="/admin/address" className="nav-link  px-0">
+                  <i className="fs-4 bi-pin-map"></i>{" "}
                   <span className="d-none d-sm-inline">Addresses List</span>
                 </a>
               </li>
@@ -60,7 +60,7 @@ function AdminNavbar() {
             <a
               href="#submenu2"
               data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle "
+              className="nav-link px-0 align-middle text-white"
             >
               <i className="fs-4 bi-cart-check"></i>{" "}
               <span className="ms-1 d-none d-sm-inline">Shipping</span>
@@ -72,13 +72,13 @@ function AdminNavbar() {
             >
               <li className="w-100">
                 <a href="/admin/shipping" className="nav-link px-0">
-                  {" "}
+                  <i className="fs-4 bi-truck"></i>{" "}
                   <span className="d-none d-sm-inline">Shippings List</span>
                 </a>
               </li>
               <li>
                 <a href="/admin/earning-reports" className="nav-link px-0">
-                  {" "}
+                  <i className="fs-4 bi-coin"></i>{" "}
                   <span className="d-none d-sm-inline">Earnings Report</span>
                 </a>
               </li>
@@ -88,7 +88,7 @@ function AdminNavbar() {
             <a
               href="#submenu3"
               data-bs-toggle="collapse"
-              className="nav-link px-0 align-middle"
+              className="nav-link px-0 align-middle text-white"
             >
               <i className="fs-4 bi-terminal"></i>{" "}
               <span className="ms-1 d-none d-sm-inline">Promos</span>{" "}
@@ -100,7 +100,7 @@ function AdminNavbar() {
             >
               <li className="w-100">
                 <a href="/admin/promo" className="nav-link px-0">
-                  {" "}
+                  <i className="fs-4 bi-terminal-split"></i>{" "}
                   <span className="d-none d-sm-inline">Promos List</span>
                 </a>
               </li>
@@ -116,13 +116,7 @@ function AdminNavbar() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            {/* <img
-              src={userProfileState.userProfiles.photos}
-              // alt="hugenerd"
-              width="30px"
-              height="30px"
-              // className="rounded-circle"
-            /> */}
+            <i className="fs-4 bi-person-circle"></i>{" "}
             <span className="d-none d-sm-inline mx-1">
               {userProfileState.userProfiles.name}
             </span>

@@ -57,7 +57,7 @@ function Register() {
       <HeaderLoginRegister />
       <div className="container">
         <div className="row justify-content-md-center">
-          <div className="col xs lg-2">
+          <div className="col-lg-6 col-xs-12">
             <div className="md-2">
               <h2 className="d-flex justify-content-center fw-bold">
                 Register
@@ -129,8 +129,12 @@ function Register() {
                 </div>
                 <div className="mt-3 d-flex justify-content-center">
                   <p className="small-text">
-                    Already have an account?{""}
-                    <Link to="/login" className="text-black">
+                    Already have an account?
+                    <Link
+                      to="/login"
+                      className="text-success text-decoration-none"
+                    >
+                      {" "}
                       Login
                     </Link>
                   </p>
@@ -229,8 +233,12 @@ function Register() {
               )}
             </div>
           </div>
-          <div className="col xs lg-2 d-flex justify-content-end">
-            <img src={RegisterImage} height="400px" alt="Register Image" />
+          <div className="col-lg-6 col-xs-12">
+            <img
+              src={RegisterImage}
+              className="img-fluid"
+              alt="Register Image"
+            />
           </div>
         </div>
       </div>

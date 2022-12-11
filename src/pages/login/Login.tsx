@@ -50,8 +50,7 @@ function Login() {
 
       <div className="container" style={{ marginTop: "5rem" }}>
         <div className="row justify-content-md-center">
-          {/* <div className="col xs lg-2"></div> */}
-          <div className="col xs lg-2">
+          <div className="col-lg-6 col-xs-12">
             <div className="md-auto">
               <h2 className="mb-3 d-flex justify-content-center fw-bold">
                 Login
@@ -86,8 +85,12 @@ function Login() {
                 </div>
                 <div className="mt-3 d-flex justify-content-center">
                   <p className="small-text">
-                    Don't have an account?{""}
-                    <Link to="/register" className="text-black">
+                    Don't have an account?
+                    <Link
+                      to="/register"
+                      className="text-success text-decoration-none"
+                    >
+                      {" "}
                       Sign Up
                     </Link>
                   </p>
@@ -95,8 +98,8 @@ function Login() {
               </form>
             </div>
           </div>
-          <div className="col xs lg-2 d-flex justify-content-end">
-            <img src={LoginImage} height="400px" alt="Login Image" />
+          <div className="col-lg-6 col-xs-12">
+            <img src={LoginImage} className="img-fluid" alt="Login Image" />
           </div>
         </div>
       </div>

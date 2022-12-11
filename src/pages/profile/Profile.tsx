@@ -16,11 +16,15 @@ function Profile() {
       <Header />
       <div className="container my-5 mt-5 p-5">
         <div className="container mt-5 p-5">
-          <div className="d-flex justify-content-center">
-            <div className="p-2 flex-fill d-flex justify-content-center">
-              <div className="card" style={{ width: "18rem" }}>
+          <div className="row justify-content-md-center">
+            <div className="col-lg-6 col-xs-12">
+              <div className="card">
                 {userProfileState.userProfiles.photos == "" ? (
-                  <img src={imageProfile} className="card-img-top" alt="..." />
+                  <img
+                    src={imageProfile}
+                    className="card-img-top img-fluid"
+                    alt="..."
+                  />
                 ) : (
                   <img
                     src={userProfileState.userProfiles.photos}
@@ -36,10 +40,10 @@ function Profile() {
                 </div>
               </div>
             </div>
-            <div className="p-2 flex-fill">
+            <div className="col-lg-6 col-xs-12">
               <div className="card">
                 <h5 className="card-header">Profile Details</h5>
-                <div className="card-body">
+                <div className="card-body table-responsive">
                   <table className="table">
                     <tbody>
                       <tr>

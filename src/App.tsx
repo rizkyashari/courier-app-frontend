@@ -28,6 +28,8 @@ import AdminEditProfile from "./pages/admin/pages/AdminEditProfile";
 import AdminPromoDetails from "./pages/admin/pages/AdminPromoDetails";
 import EarningReports from "./pages/admin/pages/EarningReports";
 import Coin from "./components/table/Coin";
+import AdminNavbar from "./pages/admin/components/navbar/AdminNavbar";
+import Header from "./components/header/Header";
 
 function App() {
   return (

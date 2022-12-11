@@ -243,7 +243,7 @@ export const useStoreAddress = create<AddressState>()((set) => ({
     set(() => ({ loading: true }));
     axios
       .get(
-        "https://courier-app-backend-production.up.railway.app/admin/address",
+        "https://courier-app-backend-production.up.railway.app/api/admin/address",
         {
           headers: {
             Authorization: `${token}`,

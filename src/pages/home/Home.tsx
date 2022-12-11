@@ -15,8 +15,13 @@ function Home() {
       <div className="container mt-2 p-2">
         <Greetings />
         {/* <Table /> */}
-        <div className="d-flex justify-content-center">
-          <img src={HomeImage} width="600px" alt="Home Image" />
+        <div className="container-lg d-flex justify-content-center">
+          <img
+            src={HomeImage}
+            className="img-fluid"
+            width="600px"
+            alt="Home Image"
+          />
         </div>
       </div>
       <Footer />

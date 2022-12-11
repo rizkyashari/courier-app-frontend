@@ -103,8 +103,11 @@ function ShippingDetails() {
   return (
     <div className="container mt-5 p-5">
       <Header />
-      <Link to="/shipping">
-        <button className="d-flex justify-content-center btn btn-success">
+      <Link
+        to="/shipping"
+        className="mt-4 d-flex justify-content-center justify-content-lg-start"
+      >
+        <button className="d-flex justify-content-lg-center btn btn-success">
           Back
         </button>
       </Link>
@@ -118,116 +121,16 @@ function ShippingDetails() {
               Shipping Details
             </div>
             <div className="card-body">
-              <div className="d-flex">
-                <div className="p-2 flex-grow-1">
+              <div className="row justify-content-md-center">
+                <div className="col-lg-4 col-xs-12 text-center">
                   <h5 className="card-title">Shipping ID</h5>
                   <p>{id}</p>
                   <h5 className="card-title">Recipient Name</h5>
                   <p>{data?.data.address.recipient_name}</p>
                   <h5 className="card-title">Full Address</h5>
                   <p>{data?.data.address.full_address}</p>
-                  <h5 className="card-title">Shipping Status</h5>
-                  {data?.data.shipping_status === "Waiting for payment" ? (
-                    <div>
-                      <p className="px-2 border-start border-success border-5 text-success">
-                        Waiting for payment
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Paid: delivery is being prepared
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in sorting warehouse
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is being delivered to destination address
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in destination address: done
-                      </p>
-                    </div>
-                  ) : data?.data.shipping_status ===
-                    "Paid: delivery is being prepared" ? (
-                    <div>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Waiting for payment
-                      </p>
-                      <p className="px-2 border-start border-success border-5 text-success">
-                        Paid: delivery is being prepared
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in sorting warehouse
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is being delivered to destination address
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in destination address: done
-                      </p>
-                    </div>
-                  ) : data?.data.shipping_status ===
-                    "Package is arrived in sorting warehouse" ? (
-                    <div>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Waiting for payment
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Paid: delivery is being prepared
-                      </p>
-                      <p className="px-2 border-start border-success border-5 text-success">
-                        Package is arrived in sorting warehouse
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is being delivered to destination address
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in destination address: done
-                      </p>
-                    </div>
-                  ) : data?.data.shipping_status ===
-                    "Package is being delivered to destination address" ? (
-                    <div>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Waiting for payment
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Paid: delivery is being prepared
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in sorting warehouse
-                      </p>
-                      <p className="px-2 border-start border-success border-5 text-success">
-                        Package is being delivered to destination address
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in destination address: done
-                      </p>
-                    </div>
-                  ) : data?.data.shipping_status ===
-                    "Package is arrived in destination address: done" ? (
-                    <div>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Waiting for payment
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Paid: delivery is being prepared
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is arrived in sorting warehouse
-                      </p>
-                      <p className="px-2 border-start border-muted border-5 text-muted">
-                        Package is being delivered to destination address
-                      </p>
-                      <p className="px-2 border-start border-success border-5 text-success">
-                        Package is arrived in destination address: done
-                      </p>
-                    </div>
-                  ) : (
-                    <p className="px-2 border-start border-success border-5 text-success">
-                      {data?.data.shipping_status}
-                    </p>
-                  )}
                 </div>
-                <div className="p-2">
+                <div className="col-lg-4 col-xs-12 text-center">
                   <h5 className="card-title">Size</h5>
                   <p>{data?.data.size.name}</p>
                   <h5 className="card-title">Category</h5>
@@ -235,24 +138,128 @@ function ShippingDetails() {
                   <h5 className="card-title">Add On</h5>
                   <p>{data?.data.add_on.name}</p>
                 </div>
-                {/* <div className="p-2">
-                  <h5 className="card-title">Description</h5>
-                  <p>{data?.data.size.description}</p>
-                  <h5 className="card-title">Description</h5>
-                  <p>{data?.data.category.description}</p>
-                  <h5 className="card-title">Description</h5>
-                  <p>{data?.data.add_on.description}</p>
-                </div> */}
-                <div className="p-2">
-                  <h5 className="card-title">Price</h5>
+                <div className="col-lg-4 col-xs-12 text-center">
+                  <h5 className="card-title">Size Price</h5>
                   <p>IDR {data?.data.size.price}</p>
-                  <h5 className="card-title">Price</h5>
+                  <h5 className="card-title">Category Price</h5>
                   <p>IDR {data?.data.category.price}</p>
-                  <h5 className="card-title">Price</h5>
+                  <h5 className="card-title">Add On Price</h5>
                   <p>IDR {data?.data.add_on.price}</p>
-                  <h5 className="card-title">Total Cost</h5>
+                  <h5 className="card-title">Total Price</h5>
                   <p>IDR {total}</p>
                 </div>
+              </div>
+              <div className="row justify-content-md-center text-center">
+                <h5 className="card-title">Shipping Status</h5>
+                {data?.data.shipping_status === "Waiting for payment" ? (
+                  <div>
+                    <p className="px-2 border-start border-danger border-5 text-success">
+                      <button className="btn btn-danger">
+                        Waiting for payment
+                      </button>
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Paid: delivery is being prepared
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in sorting warehouse
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is being delivered to destination address
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in destination address: done
+                    </p>
+                  </div>
+                ) : data?.data.shipping_status ===
+                  "Paid: delivery is being prepared" ? (
+                  <div>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Waiting for payment
+                    </p>
+                    <p className="px-2 border-start border-warning border-5 text-success">
+                      <button className="btn btn-warning">
+                        Paid: delivery is being prepared
+                      </button>
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in sorting warehouse
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is being delivered to destination address
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in destination address: done
+                    </p>
+                  </div>
+                ) : data?.data.shipping_status ===
+                  "Package is arrived in sorting warehouse" ? (
+                  <div>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Waiting for payment
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Paid: delivery is being prepared
+                    </p>
+                    <p className="px-2 border-start border-warning border-5 text-success">
+                      <button className="btn btn-warning">
+                        Package is arrived in sorting warehouse
+                      </button>
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is being delivered to destination address
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in destination address: done
+                    </p>
+                  </div>
+                ) : data?.data.shipping_status ===
+                  "Package is being delivered to destination address" ? (
+                  <div>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Waiting for payment
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Paid: delivery is being prepared
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in sorting warehouse
+                    </p>
+                    <p className="px-2 border-start border-warning border-5 text-success">
+                      <button className="btn btn-warning">
+                        Package is being delivered to destination address
+                      </button>
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in destination address: done
+                    </p>
+                  </div>
+                ) : data?.data.shipping_status ===
+                  "Package is arrived in destination address: done" ? (
+                  <div>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Waiting for payment
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Paid: delivery is being prepared
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is arrived in sorting warehouse
+                    </p>
+                    <p className="px-2 border-start border-muted border-5 text-muted">
+                      Package is being delivered to destination address
+                    </p>
+                    <p className="px-2 border-start border-success border-5 text-success">
+                      <button className="btn btn-success">
+                        Package is arrived in destination address: done
+                      </button>
+                    </p>
+                  </div>
+                ) : (
+                  <p className="px-2 border-start border-success border-5 text-success">
+                    {data?.data.shipping_status}
+                  </p>
+                )}
               </div>
               <div className="d-grid gap-2">
                 {data?.data.shipping_status === "Waiting for payment" ? (

@@ -118,12 +118,15 @@ function EditProfile() {
   return (
     <div className="container mt-5 p-5">
       <Header />
-      <Link to="/profile">
+      <Link
+        to="/profile"
+        className="mt-4 d-flex justify-content-center justify-content-lg-start"
+      >
         <button className="btn btn-success">Back</button>
       </Link>
       <div className="container" style={{ marginTop: "5rem" }}>
         <div className="row justify-content-md-center">
-          <div className="col xs lg-2">
+          <div className="col-lg-6 col-xs-12">
             <div className="md-auto">
               <h2 className="d-flex justify-content-center fw-bold">
                 Edit Profile
@@ -198,8 +201,8 @@ function EditProfile() {
               </form>
             </div>
           </div>
-          <div className="col xs lg-2 d-flex justify-content-end">
-            <img src={ProfileImage} height="400px" alt="Address Image" />
+          <div className="col-lg-6 col-xs-12">
+            <img src={ProfileImage} className="img-fluid" alt="Address Image" />
           </div>
         </div>
       </div>

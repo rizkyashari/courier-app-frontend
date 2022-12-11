@@ -80,9 +80,9 @@ const AdminTableShipping = () => {
   const renderTable = () => {
     return (
       <>
-        <div className="mx-5 my-5 col h-sm-100 d-flex flex-warp my-4 sticky-top bg-white">
+        <div className="mx-5 my-5 col h-sm-100 d-flex flex-column flex-lg-row my-4 flex-wrap sticky-top bg-white">
           <div className="mx-1 my-2 flex-fill align-items-center">
-            <label className="m-0 me-2">Label</label>
+            <label className="m-0 me-2">Show</label>
             <select
               onChange={handleChangeSelect}
               defaultValue="LAST_10_TRX"
@@ -142,12 +142,6 @@ const AdminTableShipping = () => {
           </div>
         </div>
         <div className="mx-5 my-5 table-responsive">
-          <Pagination
-            totalPages={totalPages}
-            currentPage={pages}
-            handlePrevPage={handlePrevPage}
-            handleNextPage={handleNextPage}
-          />
           <table className="table table-striped table-bordered tabel-hover">
             <thead className="table-head">
               <tr>

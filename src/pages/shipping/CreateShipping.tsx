@@ -80,14 +80,17 @@ function CreateShipping() {
   return (
     <div className="container mt-5 p-5">
       <Header />
-      <Link to="/shipping">
+      <Link
+        className="d-flex justify-content-center justify-content-lg-start mt-4 mb-0"
+        to="/shipping"
+      >
         <button className="btn btn-success">Back</button>
       </Link>
-      <div className="container" style={{ marginTop: "5rem" }}>
+      <div className="container mt-5">
         <div className="row justify-content-md-center">
-          <div className="col xs lg-2">
+          <div className="col-lg-6 col-xs-12">
             <div className="md-auto">
-              <h2 className="d-flex justify-content-center fw-bold">
+              <h2 className="d-flex text-center justify-content-center fw-bold">
                 Create New Shipping
               </h2>
               <form className="p-2" onSubmit={(e) => handleSubmit(e)}>
@@ -163,8 +166,12 @@ function CreateShipping() {
               </form>
             </div>
           </div>
-          <div className="col xs lg-2 d-flex justify-content-end">
-            <img src={ShippingImage} height="400px" alt="Shipping Image" />
+          <div className="col-lg-6 col-xs-12">
+            <img
+              src={ShippingImage}
+              className="img-fluid"
+              alt="Shipping Image"
+            />
           </div>
         </div>
       </div>

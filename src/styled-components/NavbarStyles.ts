@@ -20,6 +20,12 @@ export const NavMenuLeft = styled.div`
   justify-content: flex-start;
   gap: 10px;
   align-items: center;
+  @media (max-width: 991px) {
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const NavMenuRight = styled.div`

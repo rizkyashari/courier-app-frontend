@@ -94,16 +94,18 @@ function Payment() {
   return (
     <div className="container mt-5 p-5">
       <Header />
-      <button
-        onClick={() => {
-          navigate(`/shipping/${id}`, {
-            replace: true,
-          });
-        }}
-        className="btn btn-success"
-      >
-        Back
-      </button>
+      <div className="mt-3 d-flex justify-content-center justify-content-lg-start">
+        <button
+          onClick={() => {
+            navigate(`/shipping/${id}`, {
+              replace: true,
+            });
+          }}
+          className="btn btn-success d-flex justify-content-center"
+        >
+          Back
+        </button>
+      </div>
       <Balance />
       {error ? <p>Error</p> : null}
       {loading ? (
@@ -112,7 +114,7 @@ function Payment() {
         <div>
           <div className="container" style={{ marginTop: "5rem" }}>
             <div className="row justify-content-md-center">
-              <div className="col xs lg-2">
+              <div className="col-lg-6 col-xs-12">
                 <div className="md-auto">
                   <h2 className="d-flex justify-content-center fw-bold">
                     Payment
@@ -171,8 +173,12 @@ function Payment() {
                   </form>
                 </div>
               </div>
-              <div className="col xs lg-2 d-flex justify-content-end">
-                <img src={ShippingImage} height="400px" alt="Shipping Image" />
+              <div className="col-lg-6 col-xs-12 ">
+                <img
+                  src={ShippingImage}
+                  className="img-fluid"
+                  alt="Shipping Image"
+                />
               </div>
             </div>
           </div>

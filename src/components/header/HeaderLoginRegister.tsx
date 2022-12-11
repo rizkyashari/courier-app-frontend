@@ -13,9 +13,6 @@ function HeaderLoginRegister() {
         <NavMenuLeft>
           <img src={CompanyLogo} width="75px" alt="Company Logo" />
           <h1 className="fw-bold">CourierExpress</h1>
-          <ResponsiveNavButton>
-            <i className="bi bi-list"></i>
-          </ResponsiveNavButton>
         </NavMenuLeft>
       </Nav>
     </div>
