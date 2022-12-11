@@ -1,7 +1,7 @@
 # final-project-frontend
 
 This is a frontend repository for final project of Courier App using React.
-The app has been deployed on Vercel, here is the link:
+The app has been deployed on Vercel App, here is the link:
 https://courier-app-frontend-rizkyashari.vercel.app/
 
 ## Problem Description
